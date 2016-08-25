@@ -1,0 +1,47 @@
+<div class='container'>
+	<br/>
+	<div class='col-md-offset-3 col-md-6'>
+  <img src="<%= @details["avatar_url"] %>" width = "200">
+	</div>
+	<br/>
+<table class='table'>
+	<tr>
+<th>Name:</th>
+<td><%= @details["name"] %></td>
+</tr>
+<tr>
+<th>Email</th>
+<td><%= @details["email"] %></td>
+</tr>
+<tr>
+<th>Location</th>
+<td><%= @details["location"] %></td>
+</tr>
+<tr>
+<th>Company</th>
+<td><%= @details["company"] %></td>
+</tr>
+<tr>
+<th>Followers</th>
+<td><%= @details["followers"] %></td>
+</tr>
+<tr>
+<th>Following</th>
+<td><%= @details["following"] %></td>
+</tr>
+<tr>
+<th>Public gists</th>
+<td><%= @details["public_gists"] %></td>
+</tr>
+<tr>
+<th>public repos</th>
+<td><%= @details["public_repos"] %></td>
+</tr>
+<tr>
+<th>Blog</th>
+<td><a href="<%= @details["blog"] %>"><%= @details["blog"] %></a></td>
+</tr>
+
+</table>
+<p> <a href="<%= @details["html_url"] %>">Go to Github Account page </a> </p>
+</div>

@@ -1,0 +1,35 @@
+ <br/>
+ <br/>
+ <div class='container'>
+ <div class='col-md-offset-3 col-md-6 input-group'>
+ <%= form_tag search_user_index_path, :method => 'get' do %>
+   <span>
+    <%= text_field_tag :query,"", class: 'form-control' %>
+   </span>
+   <span align='center'>
+    <%= submit_tag "Search", :client => nil, class: 'btn btn-primary' %>
+   </span>
+<% end %>
+</div>
+<br/>
+<br/>
+<div class='col-md-offset-3 col-md-6'>
+ <% if @events.present? %>
+ 
+ <table class='table table-bordered'>
+ 	<th>Search results</th>
+ 	<tbody>
+ 		<% @events[:items].each do |item| %>
+ 		<tr>
+
+ 			<td>
+              <%= link_to item[:login], search_user_show_path(item[:login],:url => item[:url]) %>
+ 			</td>
+ 		</tr>
+        <% end %>
+ </tbody>
+ </table>
+ 
+ <% end %>
+</div>
+</div>
